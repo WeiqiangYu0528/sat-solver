@@ -3,6 +3,7 @@
 
 #include <string>
 #include <map>
+#include <iostream>
 
 // abstract superclass of the syntax tree node
 class TreeNode {
