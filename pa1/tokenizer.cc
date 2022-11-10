@@ -51,7 +51,7 @@ Token Tokenizer::getToken() {
     int start_pos = next;
     while(advanceToken() && isalnum(input[next])) {
       if (next - start_pos >= 10) {
-        throw "Error: invalid variable name";
+        throw "Error: invalid input";
       }
     }
     resultToken.content = input.substr(start_pos, next - start_pos);
