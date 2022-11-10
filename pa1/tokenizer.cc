@@ -4,9 +4,9 @@
 Tokenizer::Tokenizer(std::string ln) {
   // complete the constructor
   next = 0;
-  int first_pos = ln.find_first_not_of(' ');
+  size_t first_pos = ln.find_first_not_of(' ');
   ln.erase(0, first_pos);
-  int last_pos = ln.find_last_not_of(' ');
+  size_t last_pos = ln.find_last_not_of(' ');
   if(last_pos != std::string::npos && last_pos < ln.size() - 1){
     ln.erase(last_pos+ 1, std::string::npos);
   }
