@@ -8,7 +8,7 @@
 void parseLine(const std::string &line, std::string &formulaStr, std::string &assignmentStr) {
   // your code starts here
     char delimiter = ';';
-    int semicolon_inx = line.find(delimiter);
+    size_t semicolon_inx = line.find(delimiter);
     if (semicolon_inx == std::string::npos){
         throw "Error: invalid input";
     }
