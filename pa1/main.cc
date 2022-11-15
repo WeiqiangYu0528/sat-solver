@@ -16,14 +16,12 @@ void parseLine(const std::string &line, std::string &formulaStr, std::string &as
     assignmentStr = line.substr(semicolon_inx+1);
     FormulaParser formula(formulaStr);
     AssignmentParser assignment(assignmentStr);
-    TreeNode * root = formula.getTreeRoot();
-    bool ans = root->evaluate(assignment.parseAssignment());
+    bool ans = formula.getTreeRoot()->evaluate(assignment.parseAssignment());
     if(ans){
         std::cout << '1' << std::endl;
     }else{
         std::cout << '0' << std::endl;
     }
-    delete root;
 }
 
 // The program shall continuously ask for new inputs from standard input and output to the standard output
