@@ -12,7 +12,12 @@ class TreeNode {
   public:
     TreeNode(std::string cntt);
     // your code starts here
-
+    std::string getContent() const;
+    TreeNode *getLeftChild() const;
+    TreeNode *getRightChild() const;
+    void updateLeftChild(TreeNode *lChild); // for the operator "-", the operand is stored in leftChild
+    void updateChildren(TreeNode *lChild, TreeNode *rChild);
+    virtual ~TreeNode();
 };
 
 // concrete tree node of opertaor type
