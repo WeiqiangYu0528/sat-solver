@@ -27,7 +27,7 @@ int main() {
 //      std::cout << transformer.cnfString() << std::endl;
       DPLL dpll;
       std::unordered_set<int> variables;
-      for(int i = 0; i < transformer.getVarNum(); i++){
+      for(unsigned int i = 0; i < transformer.getVarNum(); i++){
         variables.insert(i+1);
       }
       std::unordered_map<int,bool> assignMap;
