@@ -6,7 +6,7 @@ bool satCallingMiniSat(unsigned int numVar, std::vector<std::vector<int>> &cnf) 
   // your code starts here
   std::unique_ptr<Minisat::Solver> solver(new Minisat::Solver());
   Minisat::vec<Minisat::Lit> literals;
-  for(int i = 0; i < numVar; i++){
+  for(unsigned int i = 0; i < numVar; i++){
     literals.push(Minisat::mkLit(solver->newVar()));
   }
   for(std::vector<int> &clause: cnf){
